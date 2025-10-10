@@ -396,13 +396,6 @@ public class GameManagerScript : MonoBehaviour
     public void CheckDustStorm()
     {
         if (!Application.isPlaying) return;
-        if (PlayerPrefs.GetInt("DustStorm") == 1)
-        {
-            dustStorm.SetActive(true);
-        } else
-        {
-            dustStorm.SetActive(false);
-        }
     }
 
     public void CheckPS4Input()
