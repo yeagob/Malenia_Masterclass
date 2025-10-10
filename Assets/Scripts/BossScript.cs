@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class BossScript : MonoBehaviour
@@ -12,7 +13,8 @@ public class BossScript : MonoBehaviour
 
     private Animator anim;
     public Transform player;
-    public GirlScript girlScript;
+    [FormerlySerializedAs("girlScript")]
+    public PlayerScript PlayerScript;
 
     public AudioClip[] takeDamageSound;
     public BossLifeBarScript bossLifeScript;
