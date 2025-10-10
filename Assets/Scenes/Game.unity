@@ -10831,7 +10831,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The Last Knight
+  m_Text: Malenia
 --- !u!222 &895974941
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -35183,7 +35183,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Player
+  m_Text: Let Me Solo Her
 --- !u!198 &3250676231453423679
 ParticleSystem:
   m_ObjectHideFlags: 0
