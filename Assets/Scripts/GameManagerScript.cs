@@ -227,7 +227,7 @@ public class GameManagerScript : MonoBehaviour
             objectsMaterial = dustObjectsMaterial; // seta o material dos objetos destrutiveis como os de areia
             RenderSettings.ambientMode = AmbientMode.Flat;
             RenderSettings.ambientLight = flatColor; // modo de cor unica
-            RenderSettings.skybox = dustSkybox; // ativa o skybox com o material correto
+            //RenderSettings.skybox = dustSkybox; // ativa o skybox com o material correto
             RenderSettings.fog = true; // ativa a fog
             //ambientOcclusionLayer.enabled.value = true; // ativa o ambientOcclusion
             ambientOcclusionLayer.intensity.value = 1.6f; // ativa o ambientOcclusion
