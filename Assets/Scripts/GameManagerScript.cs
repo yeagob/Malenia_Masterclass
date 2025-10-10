@@ -41,14 +41,12 @@ public class GameManagerScript : MonoBehaviour
     public Material objectsMaterial; // recebe o material que esta sendo usado
     public GameObject raycaster; // desativa junto com as pedras no chao
     public GameObject FPSCounter; // contador de FPS
-    public GameObject dustStorm; // tempestade de areia
 
     // Lightining Settings
     public Color skyColor; // gradiente do modo default
     public Color equatorColor; // gradiente do modo default
     public Color groundColor; // gradiente do modo default
     public Color flatColor; // cor unica que ilumina a cena do modo dust
-    public PostProcessVolume volume; // post-processing
     private AmbientOcclusion ambientOcclusionLayer = null; // recebe o ambiente occlusion do post-processing
     private ColorGrading colorGradingLayer = null; // recebe o colorGrading do post-processing
     private MotionBlur motionBlur = null;
@@ -207,9 +205,6 @@ public class GameManagerScript : MonoBehaviour
 
     private void SetEnvironmentLighting()
     {
-        volume.profile.TryGetSettings(out ambientOcclusionLayer);
-        volume.profile.TryGetSettings(out colorGradingLayer);
-
         if (isScenaryOn) // DUST MODE
         {
             dustMode.SetActive(true); // ativa os objetos exclusivos do dustMode
@@ -219,7 +214,7 @@ public class GameManagerScript : MonoBehaviour
             //RenderSettings.skybox = dustSkybox; // ativa o skybox com o material correto
             RenderSettings.fog = true; // ativa a fog
             //ambientOcclusionLayer.enabled.value = true; // ativa o ambientOcclusion
-            ambientOcclusionLayer.intensity.value = 1.6f; // ativa o ambientOcclusion
+//            ambientOcclusionLayer.intensity.value = 1.6f; // ativa o ambientOcclusion
             colorGradingLayer.contrast.value = 10f; // valor do contraste
             colorGradingLayer.mixerRedOutRedIn.value = 100f;
             colorGradingLayer.mixerBlueOutRedIn.value = -150f;
@@ -278,12 +273,10 @@ public class GameManagerScript : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("MotionBlur") == 1)
         {
-            if (motionBlur == null) volume.profile.TryGetSettings(out motionBlur);
             motionBlur.active = true;
         }
         else
         {
-            if (motionBlur == null) volume.profile.TryGetSettings(out motionBlur);
             motionBlur.active = false;
         }
     }
