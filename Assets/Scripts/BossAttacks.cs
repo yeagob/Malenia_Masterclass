@@ -147,40 +147,24 @@ public class BossAttacks : MonoBehaviour
         int rand = 0;
         do
         {
-            if (!anim.GetBool("Phase2")) rand = Random.Range(0, 7);
-            if (anim.GetBool("Phase2")) rand = Random.Range(0, 8);
+            if (!anim.GetBool("Phase2")) rand = Random.Range(0, 4);
+            if (anim.GetBool("Phase2")) rand = Random.Range(0, 4);
         } while (rand == lastAttack);
         lastAttack = rand;
 
-        if (anim.GetBool("Phase2") && Random.Range(0, 2) == 0) // chance de lancar uma spell antes de um ataque de longe
-        {
-            anim.SetTrigger("Spell"); // Fireball
-        }
-
         switch (rand)
         {
+
             case 0:
-                anim.SetTrigger("CastMagicSwords"); // Magic swords from sky
-                break;
-            case 1:
-                anim.SetTrigger("Casting"); // Earth Shatter
-                break;
-            case 2:
                 anim.SetTrigger("Dash");
                 break;
-            case 3:
+            case 1:
                 anim.SetTrigger("DoubleDash");
                 break;
-            case 4:
-                anim.SetTrigger("Spell"); // Fireball
-                break;
-            case 5:
+            case 2:
                 anim.SetTrigger("Scream"); 
                 break;
-            case 6:
-                anim.SetTrigger("Fishing"); // Magic Far Sword
-                break;
-            case 7:
+            case 3:
                 anim.SetTrigger("SuperSpinner");
                 break;
             default:
@@ -198,8 +182,8 @@ public class BossAttacks : MonoBehaviour
         int rand = 0;
         do
         {
-            if (!anim.GetBool("Phase2")) rand = Random.Range(0, 10);
-            if (anim.GetBool("Phase2")) rand = Random.Range(0, 13);
+            if (!anim.GetBool("Phase2")) rand = Random.Range(0, 9);
+            if (anim.GetBool("Phase2")) rand = Random.Range(0, 9);
         } while (rand == lastAttack);
         lastAttack = rand;
 
@@ -222,38 +206,23 @@ public class BossAttacks : MonoBehaviour
                 brainDebug.text = "Combo";
                 break;
             case 4:
-                anim.SetTrigger("Casting");
-                brainDebug.text = "Casting";
-                break;
-            case 5:
                 anim.SetTrigger("Combo1");
                 brainDebug.text = "Combo1";
                 break;
-            case 6:
-                anim.SetTrigger("Spell");
-                brainDebug.text = "Spell";
-                break;
-            case 7:
-                anim.SetTrigger("AuraCast");
-                brainDebug.text = "Aura Cast";
-                break;
-            case 8:
+
+            case 5:
                 anim.SetTrigger("ForwardAttack");
                 brainDebug.text = "ForwardAttack";
                 break;
-            case 9:
-                anim.SetTrigger("Scream");
-                brainDebug.text = "Scream";
-                break;
-            case 10:
+            case 6:
                 anim.SetTrigger("Impact");
                 brainDebug.text = "Impact";
                 break;
-            case 11:
+            case 7:
                 anim.SetTrigger("Strong");
                 brainDebug.text = "Strong";
                 break;
-            case 12:
+            case 8:
                 anim.SetTrigger("JumpAttack");
                 brainDebug.text = "Jump Attack";
                 break;
