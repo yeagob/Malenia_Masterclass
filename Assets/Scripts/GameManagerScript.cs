@@ -1,11 +1,9 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.SceneManagement;
 using System.Runtime.InteropServices;
-using System;
 
 [DefaultExecutionOrder(0)]
 public class GameManagerScript : MonoBehaviour
@@ -38,14 +36,10 @@ public class GameManagerScript : MonoBehaviour
     public GameObject dustMode; // parent dos objetos do sand mode
 
     // Objects Material
-    public Material defaultObjectsMaterial; // material branco para os objetos destrutiveis
-    public Material dustObjectsMaterial; // material de areia para os objetos destrutiveis
     public GameObject[] scenaryObjects;
     [HideInInspector]
     public Material objectsMaterial; // recebe o material que esta sendo usado
-    public GameObject stonesOnGround; // pedras que ficam no chao da dust mode
     public GameObject raycaster; // desativa junto com as pedras no chao
-    public GameObject destructibleObjects; // objetos do cenario
     public GameObject FPSCounter; // contador de FPS
     public GameObject dustStorm; // tempestade de areia
 
@@ -58,10 +52,6 @@ public class GameManagerScript : MonoBehaviour
     private AmbientOcclusion ambientOcclusionLayer = null; // recebe o ambiente occlusion do post-processing
     private ColorGrading colorGradingLayer = null; // recebe o colorGrading do post-processing
     private MotionBlur motionBlur = null;
-
-    // Skybox materials
-    public Material dustSkybox; // skybox laranja da dust
-    private Material defaultSkybox = null; // modo default nao possui skybox
 
     public CanvasGroup transitionFade;
     private bool restarting;
@@ -224,7 +214,6 @@ public class GameManagerScript : MonoBehaviour
         {
             dustMode.SetActive(true); // ativa os objetos exclusivos do dustMode
             defaultMode.SetActive(false); // desativa os objetos exclusivos do default mode
-            objectsMaterial = dustObjectsMaterial; // seta o material dos objetos destrutiveis como os de areia
             RenderSettings.ambientMode = AmbientMode.Flat;
             RenderSettings.ambientLight = flatColor; // modo de cor unica
             //RenderSettings.skybox = dustSkybox; // ativa o skybox com o material correto
@@ -242,10 +231,8 @@ public class GameManagerScript : MonoBehaviour
             RenderSettings.ambientSkyColor = skyColor;
             RenderSettings.ambientEquatorColor = equatorColor;
             RenderSettings.ambientGroundColor = groundColor;
-            objectsMaterial = defaultObjectsMaterial; // seta o material dos objetos destrutiveis como os defaults brancos
             defaultMode.SetActive(true); // ativa os objetos exclusivos do default mode
             dustMode.SetActive(false); // desativa os objetos exclusivos do dustMode
-            RenderSettings.skybox = defaultSkybox; // desativa o skybox
             RenderSettings.fog = false; // desativa a fog
             //ambientOcclusionLayer.enabled.value = false; // desativa o ambientOcclusion
             ambientOcclusionLayer.intensity.value = 0f; // desativa o ambientOcclusion
@@ -325,13 +312,11 @@ public class GameManagerScript : MonoBehaviour
         if (!Application.isPlaying) return;
         if (PlayerPrefs.GetInt("StonesOnGround") == 1)
         {
-            stonesOnGround.SetActive(true);
             raycaster.SetActive(true);
             isStonesOnGroundOn = true;
         }
         else
         {
-            stonesOnGround.SetActive(false);
             raycaster.SetActive(false);
             isStonesOnGroundOn = false;
         }
@@ -387,13 +372,11 @@ public class GameManagerScript : MonoBehaviour
         if (!Application.isPlaying) return;
         if (PlayerPrefs.GetInt("IsObjectsOn") == 1)
         {
-            destructibleObjects.SetActive(true);
             isObjectsOn = true;
         }
         else
         {
             isObjectsOn = false;
-            destructibleObjects.SetActive(false);
         }
     }
 
