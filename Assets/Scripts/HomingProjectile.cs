@@ -24,7 +24,7 @@ public class HomingProjectile : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         offset = new Vector3(0, 1f, 0);
         rb = this.GetComponent<Rigidbody>();
-        lifeBarScript = GameObject.Find("Canvas").transform.Find("LifeBar Parent").GetChild(0).GetComponent<LifeBarScript>();
+        lifeBarScript = FindAnyObjectByType<LifeBarScript>();
     }
 
     // Update is called once per frame

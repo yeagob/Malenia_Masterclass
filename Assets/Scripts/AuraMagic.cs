@@ -18,10 +18,10 @@ public class AuraMagic : MonoBehaviour
     {
         if (Vector3.Distance(this.transform.position, player.position) < 5.5f && isEnabled) // distancia que a magia afeta o player
         {
-            player.GetComponentInParent<GirlScript>().insideAuraMagic = true;
+            player.GetComponentInParent<PlayerScript>().insideAuraMagic = true;
         } else
         {
-            player.GetComponentInParent<GirlScript>().insideAuraMagic = false;
+            player.GetComponentInParent<PlayerScript>().insideAuraMagic = false;
         }
     }
 
@@ -29,7 +29,7 @@ public class AuraMagic : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         isEnabled = false; // desativa o poder da aura
-        player.GetComponentInParent<GirlScript>().insideAuraMagic = false;
+        player.GetComponentInParent<PlayerScript>().insideAuraMagic = false;
         Destroy(this.gameObject);
     }
 }

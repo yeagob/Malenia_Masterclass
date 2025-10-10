@@ -25,7 +25,7 @@ public class DamageDealer : MonoBehaviour
         if (other.gameObject.name == "Girl") // caso tenha colidido com o player
         {
             if (other.GetComponent<Animator>().GetBool("Intangible")) return; // nao faz dano e nem som caso o player nao possa ser acertado
-            other.transform.GetComponentInParent<GirlScript>().RegisterDamage(damageAmount); // infringe o dano no player
+            other.transform.GetComponentInParent<PlayerScript>().RegisterDamage(damageAmount); // infringe o dano no player
         }
 
         if (SoundInterval() && impactSound.Length > 0) // caso ja deu o intervalo para poder gerar som novamente
@@ -44,7 +44,7 @@ public class DamageDealer : MonoBehaviour
         if (other.gameObject.name == "Girl") // caso tenha colidido com o player
         {
             if (other.GetComponent<Animator>().GetBool("Intangible")) return; // nao faz dano e nem som caso o player nao possa ser acertado
-            other.transform.GetComponentInParent<GirlScript>().RegisterDamage(damageAmount); // infringe o dano no player
+            other.transform.GetComponentInParent<PlayerScript>().RegisterDamage(damageAmount); // infringe o dano no player
         }
 
         if (SoundInterval() && impactSound.Length > 0) // caso ja deu o intervalo para poder gerar som novamente
