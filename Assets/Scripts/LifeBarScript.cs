@@ -46,9 +46,6 @@ public class LifeBarScript : MonoBehaviour
         lifeBar.rectTransform.sizeDelta = new Vector2(life * 100, 25);
         lifeGhost.rectTransform.sizeDelta = new Vector2(life * 100, 25);
 
-        PostProcessVolume volume = Camera.main.GetComponent<PostProcessVolume>();
-        volume.profile.TryGetSettings(out colorGradingLayer);
-
         gameManager.playerIsDead = false;
     }
 

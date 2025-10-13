@@ -22,6 +22,7 @@ public class BossAttacks : MonoBehaviour
     public DamageDealer greatSword; // script que controla o dano da GreatSword
     public CameraShaker shaker; // script na camera que treme a tela
     public GameManagerScript gameManager; // usado para pegar a booleana master
+    public BossLifeBarScript bossLifeBar;
 
     [Header("Attacks")]
     public GameObject earthShatterPrefab;
