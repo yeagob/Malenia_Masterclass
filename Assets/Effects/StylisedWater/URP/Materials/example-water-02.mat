@@ -14,10 +14,10 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: 2000
   stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
@@ -76,7 +76,7 @@ Material:
     - Vector1_34CF798A: 1.75
     - Vector1_36E8227: 0
     - Vector1_3D886DA1: 0
-    - Vector1_46E42935: 0.4
+    - Vector1_46E42935: 0.355
     - Vector1_47683D42: 0.484
     - Vector1_A0EAD698: 0.5
     - Vector1_A6A0BC26: 0.025
@@ -98,7 +98,7 @@ Material:
     - _GlossyReflections: 0
     - _Metallic: 0
     - _OcclusionStrength: 1
-    - _QueueControl: 1
+    - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
@@ -112,7 +112,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_7D9A58EC: {r: 0.049127765, g: 0.2126298, b: 0.45283008, a: 0.39607844}
+    - Color_7D9A58EC: {r: 0, g: 0, b: 0, a: 1}
     - Color_F01C36BF: {r: 0.09656399, g: 0.46262187, b: 0.6603774, a: 0.23921569}
     - Vector2_37B21477: {r: 22, g: 22, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
