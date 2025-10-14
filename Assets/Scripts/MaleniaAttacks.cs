@@ -82,7 +82,8 @@ public class MaleniaAttacks : MonoBehaviour, INextMove
             kickDamageDealer.maleniaAttacks = this;
         }
     }
-
+ 
+    
     private void Update()
     {
         speedText.text = anim.GetFloat("Vertical").ToString("0.0");
@@ -189,7 +190,7 @@ public class MaleniaAttacks : MonoBehaviour, INextMove
         int rand = 0;
         do
         {
-            rand = Random.Range(0, 8);
+            rand = Random.Range(0, 2);
         } while (rand == lastAttack);
         lastAttack = rand;
 
@@ -535,14 +536,19 @@ public class MaleniaAttacks : MonoBehaviour, INextMove
         anim.SetBool("NotAttacking", true);
     }
 
-    private void SetCanRotateTrue()
+    private void SetTrackingPlayerTrue()
     {
         anim.SetBool("CanRotate", true);
     }
 
-    private void SetCanRotateFalse()
+    private void SetTrackingPlayerFalse()
     {
         anim.SetBool("CanRotate", false);
+    }
+
+    public void CastAura()
+    {
+        
     }
 }
 

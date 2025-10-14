@@ -25,6 +25,34 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1102 &-9046558733068014447
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CorteGirando
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions:
+  - {fileID: -7466792860762190041}
+  m_StateMachineBehaviours:
+  - {fileID: -8194216020301285340}
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: e165c513006986f479517809140db9de, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1101 &-8984378985092303336
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -265,6 +293,19 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &-8194216020301285340
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c9b0395663f85468492b7ecba7e3ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ManageMaleniaSwordDamage
+  damageAmount: 2
 --- !u!1101 &-7768316326902336438
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -285,6 +326,28 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
   m_ExitTime: 0.9127907
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &-7466792860762190041
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -5085852649815337137}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.82954544
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -505,25 +568,31 @@ AnimatorStateMachine:
     m_Position: {x: 330, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1058781105922177152}
-    m_Position: {x: -550, y: 940, z: 0}
+    m_Position: {x: -10, y: 470, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 450335358253774691}
-    m_Position: {x: -800, y: 940, z: 0}
+    m_Position: {x: -260, y: 460, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3450303122121340806}
-    m_Position: {x: -980, y: 840, z: 0}
+    m_Position: {x: -440, y: 370, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 9103812063658160252}
-    m_Position: {x: -1040, y: 930, z: 0}
+    m_Position: {x: -500, y: 460, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5211399830403315586}
     m_Position: {x: -1260, y: -440, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2922585350419751412}
-    m_Position: {x: 360, y: -540, z: 0}
+    m_Position: {x: 310, y: -180, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5233207790285613079}
-    m_Position: {x: 600, y: -640, z: 0}
+    m_Position: {x: 550, y: -280, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -9046558733068014447}
+    m_Position: {x: 810, y: -280, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -5085852649815337137}
+    m_Position: {x: 1100, y: -280, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 8352260298759773654}
@@ -633,6 +702,34 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1102 &-5085852649815337137
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: GreatSwordFastAttack
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions:
+  - {fileID: 1477372895855086504}
+  m_StateMachineBehaviours:
+  - {fileID: 3455666586416818171}
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 688133207205b2b478dbf02539dfb080, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1107 &-4959953298121206348
 AnimatorStateMachine:
   serializedVersion: 6
@@ -693,19 +790,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ManageMaleniaSwordDamage
   damageAmount: 2.4
---- !u!114 &-4661674017275244308
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfe053be501659041aba3014a6c125cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ManageGreatSwordDamage
-  damageAmount: 1.7
 --- !u!206 &-4441531103933225695
 BlendTree:
   m_ObjectHideFlags: 1
@@ -1321,31 +1405,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!1101 &-109764800500002127
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: Phase2
-    m_EventTreshold: 0
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 5580958171083357774}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0
-  m_ExitTime: 0.8846154
-  m_HasExitTime: 1
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -1607,7 +1666,6 @@ AnimatorState:
   m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
-  - {fileID: -109764800500002127}
   - {fileID: 8410695897024465772}
   m_StateMachineBehaviours:
   - {fileID: 1717374513923720866}
@@ -1751,6 +1809,28 @@ AnimatorStateMachine:
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -8474227409676840509}
+--- !u!1101 &1477372895855086504
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 5580958171083357774}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.8026316
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &1717302092270127600
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -2018,6 +2098,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ManageMaleniaSwordDamage
   damageAmount: 0
+--- !u!114 &3455666586416818171
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c9b0395663f85468492b7ecba7e3ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ManageMaleniaSwordDamage
+  damageAmount: 1
 --- !u!1102 &3757409311940795612
 AnimatorState:
   serializedVersion: 6
@@ -2223,12 +2316,13 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: doble combo
-  m_Speed: 2
+  m_Name: tripe combo
+  m_Speed: 3
   m_CycleOffset: 0
-  m_Transitions: []
+  m_Transitions:
+  - {fileID: 8568964955404653639}
   m_StateMachineBehaviours:
-  - {fileID: -4661674017275244308}
+  - {fileID: 9025104225549737030}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -2587,10 +2681,7 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Phase2
-    m_EventTreshold: 0
+  m_Conditions: []
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 9103812063658160252}
   m_Solo: 0
@@ -2621,6 +2712,28 @@ MonoBehaviour:
   onExit: 0
   varName: NotAttacking
   state: 1
+--- !u!1101 &8568964955404653639
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -9046558733068014447}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.94485295
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &8670939802053273712
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -2715,6 +2828,19 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &9025104225549737030
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c9b0395663f85468492b7ecba7e3ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ManageMaleniaSwordDamage
+  damageAmount: 1.7
 --- !u!1102 &9103812063658160252
 AnimatorState:
   serializedVersion: 6
