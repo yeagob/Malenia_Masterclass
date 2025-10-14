@@ -9835,6 +9835,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageOn: 0
   damageAmount: 2
+  lifestealRatio: 0
+  maleniaAttacks: {fileID: 0}
   impactSound:
   - {fileID: 8300000, guid: c415ebda2724de445be9a0fa563816c0, type: 3}
   - {fileID: 8300000, guid: db596bf3e017c7c468645042b343d7cd, type: 3}
@@ -31828,7 +31830,7 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: c6dc8d6c4252c34438efca25fbb78d2b, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: c466894f32ca5c04bb54e59e37f60509, type: 2}
+      objectReference: {fileID: 9100000, guid: 1bf40cc7820f79648b1856d526b08774, type: 2}
     - target: {fileID: 13700000, guid: c6dc8d6c4252c34438efca25fbb78d2b, type: 3}
       propertyPath: m_AABB.m_Center.x
       value: 0.00860104
@@ -32488,6 +32490,7 @@ MonoBehaviour:
   greatSword: {fileID: 6416562473904444441}
   shaker: {fileID: 0}
   gameManager: {fileID: 0}
+  bossLifeBar: {fileID: 0}
   earthShatterPrefab: {fileID: 1314945738539566, guid: 32c9fd11a72259d45aa26ae41c34c5aa,
     type: 3}
   magicSwordFromSky: {fileID: 7331409214266133120, guid: 33b44d6e09f7666489440c04933236ed,
@@ -32603,6 +32606,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageOn: 0
   damageAmount: 6
+  lifestealRatio: 0
+  maleniaAttacks: {fileID: 0}
   impactSound:
   - {fileID: 8300000, guid: 055e9bcf41fd0be4e88d16931c5f9e1f, type: 3}
 --- !u!1 &6416562474558698569 stripped

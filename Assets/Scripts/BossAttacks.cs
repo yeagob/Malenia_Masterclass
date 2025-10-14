@@ -6,7 +6,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BossAttacks : MonoBehaviour
+public class BossAttacks : MonoBehaviour,INextMove
 {
     [Header("Control")]
     public bool AI; // comanda se a inteligencia artificial estara ativada ou nao

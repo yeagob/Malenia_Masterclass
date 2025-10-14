@@ -52,6 +52,8 @@ public class PlayerScript : MonoBehaviour
         capsuleCol = model.GetComponentInChildren<CapsuleCollider>();
         rb = this.GetComponent<Rigidbody>();
         credits.SetActive(false);
+        anim.SetTrigger("Weapon");
+
     }
 
     // Update is called once per frame
@@ -212,12 +214,7 @@ public class PlayerScript : MonoBehaviour
         {
             anim.SetTrigger("HeavyAttack");
         }
-
-        if (InputManager.GetDrawSwordInput()) // botao do meio do mouse
-        {
-            anim.SetTrigger("Weapon");
-        }
-
+        
         if (InputManager.GetCameraInput() && !GameManagerScript.isBossDead) // entra e sai do modo de camera de combate
         {
             if(anim.GetBool("Equipped"))

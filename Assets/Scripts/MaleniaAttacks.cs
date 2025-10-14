@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MaleniaAttacks : MonoBehaviour
+public class MaleniaAttacks : MonoBehaviour, INextMove
 {
     [Header("Control")]
     public bool AI;
@@ -544,4 +544,9 @@ public class MaleniaAttacks : MonoBehaviour
     {
         anim.SetBool("CanRotate", false);
     }
+}
+
+public interface INextMove
+{
+    public void CallNextMove();
 }
