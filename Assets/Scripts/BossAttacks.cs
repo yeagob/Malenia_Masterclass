@@ -6,7 +6,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BossAttacks : MonoBehaviour
+public class BossAttacks : MonoBehaviour,INextMove
 {
     [Header("Control")]
     public bool AI; // comanda se a inteligencia artificial estara ativada ou nao
@@ -22,6 +22,7 @@ public class BossAttacks : MonoBehaviour
     public DamageDealer greatSword; // script que controla o dano da GreatSword
     public CameraShaker shaker; // script na camera que treme a tela
     public GameManagerScript gameManager; // usado para pegar a booleana master
+    public BossLifeBarScript bossLifeBar;
 
     [Header("Attacks")]
     public GameObject earthShatterPrefab;

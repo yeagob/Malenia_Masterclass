@@ -46,9 +46,6 @@ public class LifeBarScript : MonoBehaviour
         lifeBar.rectTransform.sizeDelta = new Vector2(life * 100, 25);
         lifeGhost.rectTransform.sizeDelta = new Vector2(life * 100, 25);
 
-        PostProcessVolume volume = Camera.main.GetComponent<PostProcessVolume>();
-        volume.profile.TryGetSettings(out colorGradingLayer);
-
         gameManager.playerIsDead = false;
     }
 
@@ -78,7 +75,7 @@ public class LifeBarScript : MonoBehaviour
 
         if (girlAnim.GetBool("Dead")) // ativa a tela de You Died
         {
-            colorGradingLayer.saturation.value = Mathf.Lerp(colorGradingLayer.saturation.value, -100, 1 * Time.deltaTime);
+            //colorGradingLayer.saturation.value = Mathf.Lerp(colorGradingLayer.saturation.value, -100, 1 * Time.deltaTime);
             youDiedScreen.GetComponent<CanvasGroup>().alpha = Mathf.Lerp(youDiedScreen.GetComponent<CanvasGroup>().alpha, 1, 0.5f * Time.deltaTime);
         }
     }

@@ -215,10 +215,7 @@ public class GameManagerScript : MonoBehaviour
             RenderSettings.fog = true; // ativa a fog
             //ambientOcclusionLayer.enabled.value = true; // ativa o ambientOcclusion
 //            ambientOcclusionLayer.intensity.value = 1.6f; // ativa o ambientOcclusion
-            colorGradingLayer.contrast.value = 10f; // valor do contraste
-            colorGradingLayer.mixerRedOutRedIn.value = 100f;
-            colorGradingLayer.mixerBlueOutRedIn.value = -150f;
-            colorGradingLayer.mixerGreenOutRedIn.value = 40f;
+
         }
         else // DEFAULT MODE
         {
@@ -230,11 +227,7 @@ public class GameManagerScript : MonoBehaviour
             dustMode.SetActive(false); // desativa os objetos exclusivos do dustMode
             RenderSettings.fog = false; // desativa a fog
             //ambientOcclusionLayer.enabled.value = false; // desativa o ambientOcclusion
-            ambientOcclusionLayer.intensity.value = 0f; // desativa o ambientOcclusion
-            colorGradingLayer.contrast.value = 0f; // valor do contraste
-            colorGradingLayer.mixerRedOutRedIn.value = 100f;
-            colorGradingLayer.mixerBlueOutRedIn.value = 0f;
-            colorGradingLayer.mixerGreenOutRedIn.value = 0f;
+
         }
 
     }
