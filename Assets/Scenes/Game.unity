@@ -2264,6 +2264,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MaleniaAttacks
   AI: 1
   debug: 1
+  impactPrefab: {fileID: 1722726733478836, guid: c1ccb96bd33a5794eab17691bce2a703,
+    type: 3}
   model: {fileID: 197437485}
   player: {fileID: 543450651639789751}
   leftFootCollider: {fileID: 404518964}
@@ -8001,7 +8003,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &739343196
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9360,7 +9362,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &826842528
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13934,7 +13936,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1253462478
 RectTransform:
   m_ObjectHideFlags: 0

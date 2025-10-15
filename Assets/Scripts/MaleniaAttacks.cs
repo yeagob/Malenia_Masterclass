@@ -9,11 +9,10 @@ public class MaleniaAttacks : MonoBehaviour, INextMove
     public bool debug;
 
     [Header("References")]
+    public GameObject impactPrefab;
     public Transform model;
     public Transform player;
     public BoxCollider leftFootCollider;
-    public Transform grabPosition;
-    public Transform swordTipPosition;
     private Animator playerAnim;
     public DamageDealer prosthesisBlade;
     public DamageDealer kickDamageDealer;
@@ -22,8 +21,7 @@ public class MaleniaAttacks : MonoBehaviour, INextMove
     public BossLifeBarScript bossLifeBar;
 
     [Header("Attacks")]
-    public GameObject grabImpactEffect;
-    public GameObject airSlashEffect;
+    public GameObject swordGlow;
 
     private Animator anim;
 
@@ -190,7 +188,7 @@ public class MaleniaAttacks : MonoBehaviour, INextMove
         int rand = 0;
         do
         {
-            rand = Random.Range(0, 2);
+            rand = Random.Range(0, 6);
         } while (rand == lastAttack);
         lastAttack = rand;
 
@@ -209,25 +207,28 @@ public class MaleniaAttacks : MonoBehaviour, INextMove
                 brainDebug.text = "Kick";
                 break;
             case 3:
-                anim.SetTrigger("RapidSlices");
-                brainDebug.text = "Rapid Slices";
-                break;
-            case 4:
                 anim.SetTrigger("UppercutSlam");
                 brainDebug.text = "Uppercut Slam";
                 break;
-            case 5:
-                anim.SetTrigger("Grab");
-                brainDebug.text = "Grab";
-                break;
-            case 6:
+            case 4:
                 anim.SetTrigger("RunningThrust");
                 brainDebug.text = "Running Thrust";
                 break;
-            case 7:
+            case 5:
                 anim.SetTrigger("Thrust");
                 brainDebug.text = "Thrust";
                 break;
+            case 6:
+                //Not implemented
+                anim.SetTrigger("RapidSlices");
+                brainDebug.text = "Rapid Slices";
+                break;
+            case 7:
+                //Not implemented
+                anim.SetTrigger("Grab");
+                brainDebug.text = "Grab";
+                break;
+ 
             default:
                 break;
         }
@@ -433,7 +434,7 @@ public class MaleniaAttacks : MonoBehaviour, INextMove
 
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            anim.SetTrigger("RapidSlices");
+            anim.SetTrigger("Thrust");
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha5))
@@ -443,14 +444,14 @@ public class MaleniaAttacks : MonoBehaviour, INextMove
 
         if (Input.GetKeyDown(KeyCode.Alpha6))
         {
-            anim.SetTrigger("Grab");
+            anim.SetTrigger("RunningThrust");
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha7))
         {
-            anim.SetTrigger("RunningThrust");
+            anim.SetTrigger("WaterfowlDance");
         }
-
+        
         if (Input.GetKeyDown(KeyCode.Alpha8))
         {
             anim.SetTrigger("OverheadSlam");
@@ -461,15 +462,6 @@ public class MaleniaAttacks : MonoBehaviour, INextMove
             anim.SetTrigger("ChargeAndSpin");
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha0))
-        {
-            anim.SetTrigger("WaterfowlDance");
-        }
-
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            anim.SetTrigger("Thrust");
-        }
     }
 
     #endregion
@@ -486,29 +478,7 @@ public class MaleniaAttacks : MonoBehaviour, INextMove
 
     #endregion
 
-    #region Attack Effects
 
-    public void SpawnGrabImpact()
-    {
-        if (grabImpactEffect != null)
-        {
-            GameObject impact = Instantiate(grabImpactEffect, grabPosition.position, Quaternion.identity);
-            Destroy(impact, 2f);
-            shaker.ShakeCamera(1f);
-        }
-    }
-
-    public void SpawnAirSlash()
-    {
-        if (airSlashEffect != null && swordTipPosition != null)
-        {
-            Vector3 direction = player.position - swordTipPosition.position;
-            GameObject slash = Instantiate(airSlashEffect, swordTipPosition.position, Quaternion.LookRotation(direction));
-            Destroy(slash, 3f);
-        }
-    }
-
-    #endregion
 
     #region Kick
 
@@ -545,10 +515,26 @@ public class MaleniaAttacks : MonoBehaviour, INextMove
     {
         anim.SetBool("CanRotate", false);
     }
-
-    public void CastAura()
+    private void Impact()
+    {
+        GameObject impactObj = Instantiate(impactPrefab, transform.position, Quaternion.identity);
+        Destroy(impactObj, 1.5f);
+        shaker.ShakeCamera(0.5f);
+    }
+    
+    private void CastAura()
     {
         
+    }
+
+    private void GlowSwordTrue()
+    {
+        swordGlow.SetActive(true);
+    }
+    
+    private void GlowSwordFalse()
+    {
+        swordGlow.SetActive(false);
     }
 }
 

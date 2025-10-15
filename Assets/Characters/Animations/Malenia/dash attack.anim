@@ -29125,14 +29125,14 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.6666667
-    functionName: SetTrackingPlayerTrue
+    functionName: SetAttackingFalse
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.0333333
-    functionName: SetAttackingFalse
+  - time: 0.7
+    functionName: SetTrackingPlayerTrue
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
