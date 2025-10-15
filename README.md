@@ -1,64 +1,75 @@
-Malenia Masterclass - Recreación del Combate Fase 1
-Proyecto patrocinado por:
-Mostrar imagen
-Escuela especializada en desarrollo de videojuegos - escuelamusk.com/videojuegos
+# Malenia Masterclass - Recreación del Combate Fase 1
 
-📚 Recursos de la Masterclass
-Este repositorio fue creado para una Masterclass en directo sobre cómo reproducir el combate contra Malenia de Elden Ring en Unity. Aquí están todos los recursos mencionados durante la sesión:
-🔗 Enlaces y Recursos Utilizados
-Proyecto Base:
+**Proyecto patrocinado por:**
 
-Proyecto original de Bruno Gottilieb - Souls Combat
+[![Escuela Musk](https://img.shields.io/badge/Patrocinado%20por-Escuela%20Musk-blue)](https://escuelamusk.com/videojuegos/)
 
-Modelos 3D:
+*Escuela especializada en desarrollo de videojuegos - [escuelamusk.com/videojuegos](https://escuelamusk.com/videojuegos/)*
 
-Modelo Let Me Solo Her (PS1 Style)
-Modelo Malenia (PS1 Style)
+---
 
-Assets de Unity:
+## 📚 Recursos de la Masterclass
 
-Shader de Agua Estilizada (URP)
-Pack de Plantas y Flores Gratis
+Este repositorio fue creado para una **Masterclass en directo** sobre cómo reproducir el combate contra Malenia de Elden Ring en Unity. Aquí están todos los recursos mencionados durante la sesión:
 
-Herramientas de Desarrollo:
+### 🔗 Enlaces y Recursos Utilizados
 
-Generador de Skyboxes con IA
-Upscaler de imágenes con IA (Local)
-Editor de modelos 3D online
-ActorCore - Rigging automático gratuito
-Mixamo - Animaciones y poses
+**Proyecto Base:**
+- [Proyecto original de Bruno Gottilieb - Souls Combat](https://github.com/BrunoGottlieb/Souls-Combat)
 
-Documentación Técnica:
+**Modelos 3D:**
+- [Modelo Let Me Solo Her (PS1 Style)](https://crimsongcat.itch.io/let-me-solo-her-ps1-psx-elden-ring)
+- [Modelo Malenia (PS1 Style)](https://crimsongcat.itch.io/malenia-ps1-psx/download/WgOeGmkjSAoiUF99jSx2veh3013JvLEX3a75CY0S)
 
-Podcast: Sistema de combate de Malenia
-Wiki oficial - Ataques de Malenia
-Guía definitiva de ataques
-Análisis técnico completo del diseño de Malenia
+**Assets de Unity:**
+- [Shader de Agua Estilizada (URP)](https://assetstore.unity.com/packages/vfx/shaders/urp-stylized-water-shader-proto-series-187485)
+- [Pack de Plantas y Flores Gratis](https://assetstore.unity.com/packages/2d/textures-materials/nature/grass-flowers-pack-free-138810)
 
+**Herramientas de Desarrollo:**
+- [Generador de Skyboxes con IA](https://ai.studio/apps/drive/1OF4J5xuJfUnpuTi4JMGePWyMveML6nLM)
+- [Upscaler de imágenes con IA (Local)](https://upscayl.org/download)
+- [Editor de modelos 3D online](https://products.aspose.app/3d/editor)
+- [ActorCore - Rigging automático gratuito](https://actorcore.reallusion.com/auto-rig/accurig)
+- [Mixamo - Animaciones y poses](https://www.mixamo.com/#/?genres=&page=2&query=pose&type=Motion%2CMotionPack)
 
-🎮 Descripción del Proyecto
-Mostrar imagen
-Esta es una recreación técnica y educativa del icónico combate contra Malenia, Blade of Miquella (Fase 1) de Elden Ring, implementada en Unity. El proyecto fue desarrollado específicamente para demostrar técnicas avanzadas de programación de IA para boss fights y mecánicas de combate complejas.
-🎯 Objetivos del Proyecto
+**Documentación Técnica:**
+- [Podcast: Sistema de combate de Malenia](https://g.co/gemini/share/e06a51bbd87c)
+- [Wiki oficial - Ataques de Malenia](https://eldenring.wiki.fextralife.com/Malenia+Blade+of+Miquella)
+- [Guía definitiva de ataques](https://claude.ai/public/artifacts/81674d84-ef01-4565-8ed4-a74435642a7f)
+- [Análisis técnico completo del diseño de Malenia](https://docs.google.com/document/d/1YDgPfXgzqlteu4Kt9V0L7F4MWYtUqZKLAI9049m23iU/edit?usp=sharing)
 
-Educativo: Enseñar el desarrollo de IA compleja para boss fights
-Técnico: Implementar sistemas de combate avanzados
-Recreativo: Fidelidad al combate original de Elden Ring
-Modular: Código reutilizable para otros proyectos
+---
 
+## 🎮 Descripción del Proyecto
 
-✨ Características Principales
-🤖 Sistema de IA Avanzado
-La IA de Malenia utiliza una Máquina de Estados Finitos (FSM) con los siguientes componentes:
-Estados Principales:
+![Screenshot Principal](Assets/Screenshot/main.png)
 
-Idle/Stalk: Movimiento neutro y evaluación de distancia
-Melee_Aggressive: Combos cuerpo a cuerpo agresivos
-Ranged_Approach: Ataques de acercamiento a media/larga distancia
-WFD_Ready: Estado especial para Waterfowl Dance
+Esta es una recreación técnica y educativa del icónico combate contra **Malenia, Blade of Miquella** (Fase 1) de Elden Ring, implementada en Unity. El proyecto fue desarrollado específicamente para demostrar técnicas avanzadas de programación de IA para boss fights y mecánicas de combate complejas.
 
-Lógica de Decisión:
-csharp// Ejemplo del sistema de decisión basado en distancia
+### 🎯 Objetivos del Proyecto
+
+- **Educativo**: Enseñar el desarrollo de IA compleja para boss fights
+- **Técnico**: Implementar sistemas de combate avanzados
+- **Recreativo**: Fidelidad al combate original de Elden Ring
+- **Modular**: Código reutilizable para otros proyectos
+
+---
+
+## ✨ Características Principales
+
+### 🤖 Sistema de IA Avanzado
+
+La IA de Malenia utiliza una **Máquina de Estados Finitos (FSM)** con los siguientes componentes:
+
+#### Estados Principales:
+- **Idle/Stalk**: Movimiento neutro y evaluación de distancia
+- **Melee_Aggressive**: Combos cuerpo a cuerpo agresivos
+- **Ranged_Approach**: Ataques de acercamiento a media/larga distancia
+- **WFD_Ready**: Estado especial para Waterfowl Dance
+
+#### Lógica de Decisión:
+```csharp
+// Ejemplo del sistema de decisión basado en distancia
 private void AI_Manager()
 {
     if (distance >= farValue)
@@ -106,6 +117,7 @@ private void AI_Manager()
 ## 🏗️ Arquitectura Técnica
 
 ### 📁 Estructura del Proyecto
+
 ```
 Assets/
 ├── Animators/
@@ -125,10 +137,15 @@ Assets/
     ├── main.png
     ├── 2.png
     └── 3.png
-🔧 Componentes Clave
-MaleniaAttacks.cs
+```
+
+### 🔧 Componentes Clave
+
+#### MaleniaAttacks.cs
 El script principal que maneja toda la lógica de combate:
-csharppublic class MaleniaAttacks : MonoBehaviour, INextMove
+
+```csharp
+public class MaleniaAttacks : MonoBehaviour, INextMove
 {
     [Header("AI Manager")]
     public float nearValue;
@@ -146,33 +163,36 @@ csharppublic class MaleniaAttacks : MonoBehaviour, INextMove
         bossLifeBar.UpdateLife(healAmount);
     }
 }
-Animator Controller
+```
+
+#### Animator Controller
 Maneja las transiciones entre estados de animación con parámetros como:
+- `Vertical/Horizontal`: Movimiento direccional
+- `Attacking`: Estado de ataque activo
+- `TakingDamage`: Estado de recibir daño
+- `Dead`: Estado de muerte
+- Triggers específicos para cada ataque
 
-Vertical/Horizontal: Movimiento direccional
-Attacking: Estado de ataque activo
-TakingDamage: Estado de recibir daño
-Dead: Estado de muerte
-Triggers específicos para cada ataque
+![Screenshot Sistema](Assets/Screenshot/3.png)
 
-Mostrar imagen
-🎯 Sistema de Waterfowl Dance
+### 🎯 Sistema de Waterfowl Dance
+
 La implementación del ataque más icónico de Malenia:
-Condiciones de Activación:
 
-HP menor al 75%
-Distancia entre 8-15 metros
-Cooldown disponible
-No interrumpida
+#### Condiciones de Activación:
+- HP menor al 75%
+- Distancia entre 8-15 metros
+- Cooldown disponible
+- No interrumpida
 
-Fases del Ataque:
+#### Fases del Ataque:
+1. **Wind-up** (20 frames): Preparación vulnerable
+2. **Flurry 1**: Ráfaga inicial con homing
+3. **Flurry 2**: Recálculo y segunda ráfaga
+4. **Flurry 3**: Ráfaga final con inversión de eje
 
-Wind-up (20 frames): Preparación vulnerable
-Flurry 1: Ráfaga inicial con homing
-Flurry 2: Recálculo y segunda ráfaga
-Flurry 3: Ráfaga final con inversión de eje
-
-csharpprivate bool CanUseWaterfowlDance()
+```csharp
+private bool CanUseWaterfowlDance()
 {
     if (waterfowlUsed) return false;
     
@@ -182,97 +202,118 @@ csharpprivate bool CanUseWaterfowlDance()
     
     return hpCondition && distanceCondition;
 }
+```
 
-🎮 Controles y Debugging
-🕹️ Controles de Debug (Solo Master)
+---
 
-Keypad 0: Toggle AI On/Off
-Keypad 1: Activar modo debug
-Alpha 1-9: Ataques manuales específicos
+## 🎮 Controles y Debugging
 
-📊 UI de Debug
+### 🕹️ Controles de Debug (Solo Master)
+
+- **Keypad 0**: Toggle AI On/Off
+- **Keypad 1**: Activar modo debug
+- **Alpha 1-9**: Ataques manuales específicos
+
+### 📊 UI de Debug
+
 El sistema incluye múltiples indicadores visuales:
+- **Brain Icon**: Indica si la IA está activa
+- **Distance Debug**: Distancia actual al jugador (con colores)
+- **Attack State**: Estado actual de ataque
+- **Speed Value**: Velocidad de movimiento actual
+- **Damage Value**: Cantidad de daño configurada
 
-Brain Icon: Indica si la IA está activa
-Distance Debug: Distancia actual al jugador (con colores)
-Attack State: Estado actual de ataque
-Speed Value: Velocidad de movimiento actual
-Damage Value: Cantidad de daño configurada
+---
 
+## 🚀 Instalación y Configuración
 
-🚀 Instalación y Configuración
-⚙️ Requisitos
+### ⚙️ Requisitos
 
-Unity 2022.3 LTS o superior
-Universal Render Pipeline (URP)
-Input System Package
+- **Unity 2022.3 LTS** o superior
+- **Universal Render Pipeline (URP)**
+- **Input System Package**
 
-📥 Configuración
+### 📥 Configuración
 
-Clonar el repositorio:
-
-bashgit clone https://github.com/yeagob/Malenia_Masterclass.git
+1. **Clonar el repositorio:**
+```bash
+git clone https://github.com/yeagob/Malenia_Masterclass.git
 cd Malenia_Masterclass
 git checkout develop
+```
 
-Abrir en Unity:
+2. **Abrir en Unity:**
+   - Abrir Unity Hub
+   - Seleccionar "Open Project"
+   - Navegar a la carpeta del proyecto
 
-Abrir Unity Hub
-Seleccionar "Open Project"
-Navegar a la carpeta del proyecto
+3. **Configurar la escena:**
+   - La escena principal está en `Assets/Scenes/`
+   - Asegurar que URP está configurado
+   - Verificar que todos los prefabs están asignados
+
+### 🎯 Parámetros Configurables
+
+#### En MaleniaAttacks.cs:
+- `nearValue`: Distancia para ataques cuerpo a cuerpo
+- `farValue`: Distancia para cambiar a modo persecución
+- `chillTime`: Tiempo de espera entre acciones
+- `waterfowlHPThreshold`: Umbral de HP para Waterfowl Dance
+
+---
+
+## 📈 Frame Data y Balanceo
+
+### ⏱️ Datos Técnicos (60 FPS)
+
+| Ataque | Startup | Active | Recovery | Ventana de Castigo |
+|--------|---------|--------|----------|-------------------|
+| Five Hit Combo (Hit 3) | 8F | 3F | 18F | **20F** |
+| Jump Thrust | 45F | 4F | 35F | 18F |
+| Waterfowl Wind-up | 20F | 0F | N/A | N/A |
+| Spinning Kick | 25F | 6F | 40F | 25F |
+
+### 🎯 Sistema de Lifesteal
+
+- **Ratio base**: 1.6% del HP máximo por golpe
+- **Activación**: En cualquier hit exitoso (incluso bloqueado)
+- **Propósito**: Penalizar estrategias defensivas pasivas
+
+---
+
+## 🏆 Créditos y Reconocimientos
+
+### 👨‍💻 Desarrollo Principal
+- **Proyecto base**: [Bruno Gottilieb](https://github.com/BrunoGottlieb/Souls-Combat)
+- **Adaptación y Masterclass**: [yeagob](https://github.com/yeagob)
+
+### 🎨 Assets y Modelos
+- **Malenia Model**: CrimsonGCat
+- **Let Me Solo Her Model**: CrimsonGCat
+- **Water Shader**: Proto Series (Unity Asset Store)
+- **Nature Pack**: Unity Asset Store
+
+### 🎓 Colaboración Educativa
+- **[Escuela Musk](https://escuelamusk.com/videojuegos/)**: Patrocinio y apoyo educativo
+- **FromSoftware**: Creadores originales de Malenia y Elden Ring
+
+---
+
+## 📝 Licencia y Uso
+
+Este proyecto tiene fines **educativos y de investigación** únicamente. 
+
+- ✅ Uso para aprendizaje y enseñanza
+- ✅ Modificación y experimentación
+- ✅ Referencia para otros proyectos educativos
+- ❌ Uso comercial sin autorización
+- ❌ Distribución de assets propietarios
+
+---
+
+- **Escuela Musk**: [escuelamusk.com/videojuegos](https://escuelamusk.com/videojuegos/)
 
 
-Configurar la escena:
+---
 
-La escena principal está en Assets/Scenes/
-Asegurar que URP está configurado
-Verificar que todos los prefabs están asignados
-
-
-
-🎯 Parámetros Configurables
-En MaleniaAttacks.cs:
-
-nearValue: Distancia para ataques cuerpo a cuerpo
-farValue: Distancia para cambiar a modo persecución
-chillTime: Tiempo de espera entre acciones
-waterfowlHPThreshold: Umbral de HP para Waterfowl Dance
-
-
-📈 Frame Data y Balanceo
-⏱️ Datos Técnicos (60 FPS)
-AtaqueStartupActiveRecoveryVentana de CastigoFive Hit Combo (Hit 3)8F3F18F20FJump Thrust45F4F35F18FWaterfowl Wind-up20F0FN/AN/ASpinning Kick25F6F40F25F
-🎯 Sistema de Lifesteal
-
-Ratio base: 1.6% del HP máximo por golpe
-Activación: En cualquier hit exitoso (incluso bloqueado)
-Propósito: Penalizar estrategias defensivas pasivas
-
-
-🏆 Créditos y Reconocimientos
-👨‍💻 Desarrollo Principal
-
-Proyecto base: Bruno Gottilieb
-Adaptación y Masterclass: yeagob
-
-🎨 Assets y Modelos
-
-Malenia Model: CrimsonGCat
-Let Me Solo Her Model: CrimsonGCat
-Water Shader: Proto Series (Unity Asset Store)
-Nature Pack: Unity Asset Store
-
-🎓 Colaboración Educativa
-
-Escuela Musk: Patrocinio y apoyo educativo
-FromSoftware: Creadores originales de Malenia y Elden Ring
-
-
-📝 Licencia y Uso
-Este proyecto tiene fines educativos y de investigación únicamente.
-
-✅ Uso para aprendizaje y enseñanza
-✅ Modificación y experimentación
-✅ Referencia para otros proyectos educativos
-❌ Uso comercial sin autorización
-❌ Distribución de assets propietarios
+*Proyecto desarrollado con 💜 para la comunidad de desarrollo de videojuegos*
