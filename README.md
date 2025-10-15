@@ -311,31 +311,8 @@ Este proyecto tiene fines **educativos y de investigación** únicamente.
 
 ---
 
-## 🤝 Contribuciones
-
-¡Las contribuciones son bienvenidas! Si tienes ideas para mejorar:
-
-1. Fork del proyecto
-2. Crear una branch para tu feature
-3. Commit de tus cambios
-4. Push a la branch
-5. Abrir un Pull Request
-
-### 📋 Áreas de Mejora
-
-- [ ] Implementación de Phase 2
-- [ ] Mejora de efectos visuales
-- [ ] Optimización de performance
-- [ ] Sistema de sonido
-- [ ] Más variaciones de ataques
-
----
-
-## 📞 Contacto y Soporte
-
-- **Issues**: [GitHub Issues](https://github.com/yeagob/Malenia_Masterclass/issues)
 - **Escuela Musk**: [escuelamusk.com/videojuegos](https://escuelamusk.com/videojuegos/)
-- **Documentación adicional**: Ver links en la sección de recursos
+
 
 ---
 
