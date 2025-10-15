@@ -1,13 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class UpdateBossAttackTime : StateMachineBehaviour
+public class ManageMaleniaSwordDamage : StateMachineBehaviour
 {
+    public float damageAmount;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.gameObject.GetComponent<INextMove>().CallNextMove(); // avisa o script boss attack de que o ataque acabou
+        animator.gameObject.GetComponent<MaleniaAttacks>().prosthesisBlade.damageAmount = damageAmount; 
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

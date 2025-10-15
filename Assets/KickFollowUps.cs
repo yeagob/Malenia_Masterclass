@@ -1,13 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class UpdateBossAttackTime : StateMachineBehaviour
+public class KickFollowUps : StateMachineBehaviour
 {
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.gameObject.GetComponent<INextMove>().CallNextMove(); // avisa o script boss attack de que o ataque acabou
+        int follow = Random.Range(0, 4);
+        if (follow == 0)
+        {
+            animator.SetTrigger("FollowKickA");
+        }
+        if (follow == 1)
+        {
+            animator.SetTrigger("FollowKickB");
+        }
+        if (follow == 2)
+        {
+            animator.SetTrigger("FollowKickC");
+        }
+        if (follow == 3)
+        {
+            animator.SetTrigger("FollowKickD");
+        }
+
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
