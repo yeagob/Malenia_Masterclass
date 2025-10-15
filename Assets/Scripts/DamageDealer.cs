@@ -23,7 +23,7 @@ public class DamageDealer : MonoBehaviour
 
         if (other.gameObject.layer != 11 && other.gameObject.layer != 13) return;
 
-        if (other.gameObject.name == "Girl")
+        if (other.gameObject.name == "LetMeSoloHer_Player")
         {
             if (other.GetComponent<Animator>().GetBool("Intangible")) return;
             other.transform.GetComponentInParent<PlayerScript>().RegisterDamage(damageAmount);
@@ -47,7 +47,7 @@ public class DamageDealer : MonoBehaviour
 
         if (other.gameObject.layer != 11 && other.gameObject.layer != 13) return;
 
-        if (other.gameObject.name == "Girl")
+        if (other.gameObject.name == "LetMeSoloHer_Player")
         {
             if (other.GetComponent<Animator>().GetBool("Intangible")) return;
             other.transform.GetComponentInParent<PlayerScript>().RegisterDamage(damageAmount);
