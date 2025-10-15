@@ -163,6 +163,7 @@ public class MaleniaAttacks : MonoBehaviour, INextMove
         {
             rand = Random.Range(0, 2);
         } while (rand == lastAttack);
+        
         lastAttack = rand;
 
         switch (rand)
@@ -177,6 +178,8 @@ public class MaleniaAttacks : MonoBehaviour, INextMove
                 break;
         }
 
+        waterfowlUsed = false;
+        
         action = "Wait";
     }
 
@@ -190,6 +193,7 @@ public class MaleniaAttacks : MonoBehaviour, INextMove
         {
             rand = Random.Range(0, 6);
         } while (rand == lastAttack);
+        
         lastAttack = rand;
 
         switch (rand)
@@ -238,7 +242,8 @@ public class MaleniaAttacks : MonoBehaviour, INextMove
 
     private bool CanUseWaterfowlDance()
     {
-        if (waterfowlUsed) return false;
+        if (waterfowlUsed) 
+            return false;
         
         float currentHPRatio = bossLifeBar.GetBossLifeAmount() / bossLifeBar.maxLife;
         bool hpCondition = currentHPRatio <= waterfowlHPThreshold;
